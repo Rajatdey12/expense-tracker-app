@@ -1,0 +1,26 @@
+<div class="layout-column align-items-center justify-content-center">
+    <section class="content layout-row align-items-center justify-content-center mt-50">
+      <table class="card content">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="slide-up-fade-in" data-test-id="expense-list-item" *ngFor="let expense of appService.getExpenses(); let i = index">
+              <!-- Use below columns to display item and amount -->
+              <td class="item">{{ expense.item }}</td>
+              <td [ngClass]="expense.amount> 0?'plus':'minus'">{{ expense.amount }}</td>
+              <td><button class="danger outlined" data-test-id="expense-list-delete" (click) = deleteExpense(i)>Delete</button></td>
+            </tr>
+            <tr class="total-expense">
+              <td>TOTAL</td>
+              <!-- Use below column to display total amount -->
+              <td data-test-id="total-expense">{{ appService.getTotalExpense() }}</td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+</div>

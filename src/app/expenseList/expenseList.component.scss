@@ -1,0 +1,20 @@
+.content {
+  width: 500px;
+}
+
+.content th,
+.content td {
+  text-align: center;
+}
+
+.plus {
+  color: var(--primary-color)
+}
+
+.minus {
+  color: var(--error-color);
+}
+
+.outlined{
+  min-height: 36px;
+}

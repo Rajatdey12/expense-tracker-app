@@ -1,0 +1,10 @@
+<div class="layout-column">
+  <div class="layout-row align-items-center justify-content-center mt-50">
+    <section class="layout-row justify-content-center align-items-center">
+        <input class="mr-30" type="text" data-test-id="item-input" [(ngModel)] = "item" required placeholder="Enter Item" />
+        <input class="mr-30" type="number" data-test-id="amount-input" [(ngModel)] = "amount" required placeholder="Enter Amount" />
+        <button data-test-id="submit-button" (click)= "addExpense()" [disabled]="!item || amount === null" class="w-30">Submit</button>
+    </section>
+  </div>
+</div>
+
